@@ -107,7 +107,9 @@ final class SwiftAsyncAssertTests: XCTestCase {
     }
 
     func test_should_pass_AsyncAssertThrows() async throws {
-        await AsyncAssertThrowsError(try await throwingExpr { throw TestingError.systemFailedToWork })
+        await AsyncAssertThrowsError(try await throwingExpr { throw TestingError.systemFailedToWork }) { error in
+            XCTAssertEqual(error as? TestingError, .systemFailedToWork)
+        }
     }
 
     func test_should_pass_AsyncAssertNotThrows() async throws {
