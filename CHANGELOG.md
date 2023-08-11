@@ -18,7 +18,7 @@ Contains the following assert methods
 * `AsyncAssertNotEqual(_:_:_:)`
 * `AsyncAssertNotEqual(_:_:accuracy:_:)`
 * `AsyncAssertGreaterThan(_:_:_:)`
-* 'AsyncAssertGreaterThanOrEqual(_:_:_:)`
+* `AsyncAssertGreaterThanOrEqual(_:_:_:)`
 * `AsyncAssertLessThan(_:_:_:)`
 * `AsyncAssertLessThanOrEqual(_:_:_:)`
 * `AsyncAssertIdentical(_:_:_:)`
