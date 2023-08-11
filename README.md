@@ -11,7 +11,7 @@ Instead of writing
 ```swift
 import XCTest
 
-func test_should_succeed() async
+func test_should_succeed() async {
     do {
         let isTrue = try await shouldSucceed()
         XCTAssertTrue(isTrue)
@@ -26,11 +26,11 @@ conveniently write
 ```swift
 import SwiftAsyncAssert
 
-func test_should_succeed() async 
+func test_should_succeed() async {
     await AsyncAssertTrue(try await shouldSucceed())
 }
 
-func test_should_throwError() async 
+func test_should_throwError() async {
     await AsyncAssertThrowsError(try await shouldFail())
 }
 ```
