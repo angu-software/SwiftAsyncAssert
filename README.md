@@ -3,8 +3,8 @@
 [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fangu-software%2FSwiftAsyncAssert%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/angu-software/SwiftAsyncAssert)
 [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fangu-software%2FSwiftAsyncAssert%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/angu-software/SwiftAsyncAssert)
 
-![version](https://img.shields.io/github/v/release/angu-software/SwiftAsyncAssert?label=Version&labelColor=white&color=%23F05138)
-![build status](https://img.shields.io/github/actions/workflow/status/angu-software/SwiftAsyncAssert/swift.yml?logo=githubactions&labelColor=white&label=Build)
+![version](https://img.shields.io/github/v/release/angu-software/SwiftAsyncAssert?label=Version&color=%23F05138)
+![build status](https://img.shields.io/github/actions/workflow/status/angu-software/SwiftAsyncAssert/swift.yml?logo=githubactions&label=Build)
 
 Assert functions to evaluate Swift concurrency async expressions in XCTests.
 
