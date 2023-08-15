@@ -2,6 +2,8 @@
 
 ## HEAD
 
+## 1.0.1
+
 * Fixed `AsyncAssertThrowsError(_:_:_:)` would not execute the error handler closure in case the evaluated expression throws an error.
 
 ## 1.0.0
