@@ -2,6 +2,8 @@
 
 ## HEAD
 
+* Fixed `AsyncAssertThrowsError(_:_:_:)` would not execute the error handler closure in case the evaluated expression throws an error.
+
 ## 1.0.0
 
 Initial release
@@ -25,5 +27,5 @@ Contains the following assert methods
 * `AsyncAssertNotIdentical(_:_:_:)`
 * `AsyncAssertNil(_:_:)`
 * `AsyncAssertNotNil(_:_:)`
-* `AsyncAssertThrowsError(_:_:)`
+* `AsyncAssertThrowsError(_:_:_:)`
 * `AsyncAssertNoThrow(_:_:)`

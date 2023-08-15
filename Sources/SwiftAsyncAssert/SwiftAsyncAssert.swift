@@ -201,9 +201,9 @@ public func AsyncAssertNotNil(_ expression: @autoclosure () async throws -> Any?
 public func AsyncAssertThrowsError<T>(_ expression: @autoclosure () async throws -> T, _ message: @autoclosure () -> String = "", file: StaticString = #filePath, line: UInt = #line, _ errorHandler: (_ error: Error) -> Void = { _ in }) async {
     do {
         let _ = try await expression()
-        XCTAssertThrowsError({}(), message(), file: file, line: line)
+        XCTAssertThrowsError({}(), message(), file: file, line: line, errorHandler)
     } catch {
-        XCTAssertThrowsError(try { throw error }(), message(), file: file, line: line)
+        XCTAssertThrowsError(try { throw error }(), message(), file: file, line: line, errorHandler)
     }
 }
 
