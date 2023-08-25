@@ -16,16 +16,19 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v3
-    - run: xcodebuild test -scheme SwiftAsyncAssert -destination "platform=macOS"
+    - run: xcodebuild build-for-testing -scheme SwiftAsyncAssert -destination "platform=macOS"
+    - run: xcodebuild test-without-building -scheme SwiftAsyncAssert -destination "platform=macOS"
   test-iOS:
     name: Test iOS
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v3
-    - run: xcodebuild test -scheme SwiftAsyncAssert -destination "platform=iOS Simulator,name=iPhone 13"
+    - run: xcodebuild build-for-testing -scheme SwiftAsyncAssert -destination "platform=iOS Simulator,name=iPhone 13"
+    - run: xcodebuild test-without-building -scheme SwiftAsyncAssert -destination "platform=iOS Simulator,name=iPhone 13"
   test-watchOS:
     name: Test watchOS
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v3
-    - run: xcodebuild test -scheme SwiftAsyncAssert -destination "platform=watchOS Simulator,name=Apple Watch Series 5 (40mm)"
+    - run: xcodebuild build-for-testing -scheme SwiftAsyncAssert -destination "platform=watchOS Simulator,name=Apple Watch Series 5 (40mm)"
+    - run: xcodebuild test-without-building -scheme SwiftAsyncAssert -destination "platform=watchOS Simulator,name=Apple Watch Series 5 (40mm)"
