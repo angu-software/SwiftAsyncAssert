@@ -10,23 +10,21 @@ on:
     branches: [ "main" ]
 
 jobs:
-  test-mac-os:
+  test-macOS:
+    name: Test MacOS
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v3
     - run: xcodebuild test -scheme SwiftAsyncAssert -destination "platform=macOS"
-  build:
-
+  test-iOS:
+    name: Test iOS
     runs-on: macos-latest
-
     steps:
     - uses: actions/checkout@v3
-    - name: Test macOS
-      run: | 
-        xcodebuild test -scheme SwiftAsyncAssert -destination "platform=macOS"
-    - name: Test iOS
-      run: | 
-        xcodebuild test -scheme SwiftAsyncAssert -destination "platform=iOS Simulator,name=iPhone 13"
-    - name: Test watchOS
-      run: |
-        xcodebuild test -scheme SwiftAsyncAssert -destination "platform=watchOS Simulator,name=Apple Watch Series 5 (40mm)"
+    - run: xcodebuild test -scheme SwiftAsyncAssert -destination "platform=iOS Simulator,name=iPhone 13"
+  test-watchOS:
+    name: Test watchOS
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v3
+    - run: xcodebuild test -scheme SwiftAsyncAssert -destination "platform=watchOS Simulator,name=Apple Watch Series 5 (40mm)"
