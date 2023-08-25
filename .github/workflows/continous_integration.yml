@@ -18,8 +18,9 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build
       run: swift build -v
-    - name: Run tests
-      run: swift test -v
+    - name: Test iOS
+      run: | 
+        xcodebuild test -scheme SwiftAsyncAssert -destination "platform=iOS Simulator,name=iPhone 13"
     - name: Test watchOS
       run: |
         xcodebuild test -scheme SwiftAsyncAssert -destination "platform=watchOS Simulator,name=Apple Watch Series 5 (40mm)"
