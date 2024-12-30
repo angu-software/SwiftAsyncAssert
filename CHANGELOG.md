@@ -2,6 +2,11 @@
 
 ## HEAD
 
+## 1.1.0
+
+* Ensure compatibility with Swift 6.0
+* Account for possible data races when evaluating expressions in case they throwing an error to be 
+
 ## 1.0.1
 
 * Fixed `AsyncAssertThrowsError(_:_:_:)` would not execute the error handler closure in case the evaluated expression throws an error.
