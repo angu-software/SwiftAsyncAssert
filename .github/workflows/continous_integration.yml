@@ -32,5 +32,5 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v3
-    - run: xcodebuild build-for-testing -scheme SwiftAsyncAssert -destination "platform=watchOS Simulator,name=Apple Watch Series 5 (40mm)"
-    - run: xcodebuild test-without-building -scheme SwiftAsyncAssert -destination "platform=watchOS Simulator,name=Apple Watch Series 5 (40mm)"
+    - run: xcodebuild build-for-testing -scheme SwiftAsyncAssert -destination "platform=watchOS Simulator,name=Apple Watch Ultra 3 (49mm)"
+    - run: xcodebuild test-without-building -scheme SwiftAsyncAssert -destination "platform=watchOS Simulator,name=Apple Watch Ultra 3 (49mm)"
