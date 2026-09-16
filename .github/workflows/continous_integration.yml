@@ -25,8 +25,8 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v3
-    - run: xcodebuild build-for-testing -scheme SwiftAsyncAssert -destination "platform=iOS Simulator,name=iPhone 13"
-    - run: xcodebuild test-without-building -scheme SwiftAsyncAssert -destination "platform=iOS Simulator,name=iPhone 13"
+    - run: xcodebuild build-for-testing -scheme SwiftAsyncAssert -destination "platform=iOS Simulator,name=iPhone 16e"
+    - run: xcodebuild test-without-building -scheme SwiftAsyncAssert -destination "platform=iOS Simulator,name=iPhone 16e"
   test-watchOS:
     name: Test watchOS
     runs-on: macos-latest
